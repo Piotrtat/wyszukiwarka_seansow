@@ -1,1 +1,2 @@
-bedzie dobrze
+bedzie dobrze,
+bedize lepiej
