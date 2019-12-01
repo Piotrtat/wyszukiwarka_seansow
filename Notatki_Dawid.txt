@@ -1,0 +1,19 @@
+Projekt wyszukiwarki seansów
+
+1.	Wyszukiwanie seansów w trzech kinach według tytułu, przedziału czasowego
+2.	Wysyłanie zapytań do stron nie do bazy
+3.	Dodatkowo możliwość logowania
+4.	Możliwość sortowania według odległości
+5.	Aplikacja webowa potem Facebookowa
+
+Kryteria:
+1.	Tytuł filmu
+2.	Godzina
+3.	Lokalizacja
+4.	
+
+
+Zmiana sposobu szukania seansów
+1.	Sława – po co my to robimy?
+2.	Wygoda – dlaczego klient ma uwierzyć w projekt?
+3.	Brak reklam i jedna strona – co mamy my czego nie mają inni?
