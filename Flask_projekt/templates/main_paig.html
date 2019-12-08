@@ -6,10 +6,18 @@
     <meta name="description" content="Wyszukaj seansu w danym przedziale godzin" />
     <meta name="keywords" content="wyszukaj seans, seans, repertuar, kina, kino, kino w Lodzi" />
     <title>'Wyszukiwarka Seansów'</title>
-    <link rel="stylesheet" href="style_home_page.css" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_home_page.css') }}" />
+    <style>
+        body {
+            background: url('../static/background/tlo.jpg');
+            background-size: cover;
+
+        }
+    </style>
 </head>
 <body>
     <header>Wyszukiwarka seansów</header>
+    <form>
         Nazwa Filmu: <input type="text" id="movie" /><br />
         Godzina od: <input type="time" id="hour" /><br />
         Godzina do: <input type="time" id="hour" /><br />
