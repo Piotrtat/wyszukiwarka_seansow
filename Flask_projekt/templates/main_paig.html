@@ -2,6 +2,8 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta http-equiv="Content-Language" content="pl" />
     <meta name="description" content="Wyszukaj seansu w danym przedziale godzin" />
     <meta name="keywords" content="wyszukaj seans, seans, repertuar, kina, kino, kino w Lodzi" />
@@ -16,13 +18,27 @@
     </style>
 </head>
 <body>
+<div class="form-group">
     <header>Wyszukiwarka seansów</header>
-    <form>
-        Nazwa Filmu: <input type="text" id="movie" /><br />
-        Godzina od: <input type="time" id="hour" /><br />
-        Godzina do: <input type="time" id="hour" /><br />
-         <input type="submit" value="Wyszukaj">
+    <form action="main_paig.html" class="was-validated">
+        <label for="movie">Nazwa filmu:
+        <input type="text" class="form-control" placeholder="Nazwa filmu" id="movie" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+    </label><br />
+     <div class="form-group">
+    <label for="sel1">Wybierz godziny:</label>
+         <div class=".col-xs-2">
+  <select class="form-control" id="sel1" >
+    <option>10:00-11:00</option>
+    <option>11:00-12:00</option>
+    <option>12:00-13:00</option>
+    <option>13:00-14:00</option>
+  </select>
+         </div>
+</div>
     </form>
-
+    <button type="submit" class="btn btn-primary">Wyszukaj</button>
+</div>
 </body>
 </html>
