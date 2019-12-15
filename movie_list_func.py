@@ -3,6 +3,21 @@ from bs4 import BeautifulSoup
 import re
 
 
+def final(dict1, dict2):
+    print('Oto lista dostępnych seansów w kinie Helios Łodź w dniu dzisiejszym:\n')
+    for keys in dict1.keys():
+        j = dict1.get(keys)
+        if '?' in j:
+            p = j.replace('?events-filter=only-not-dream', '')
+            print(p.replace('-', ' '))
+        else:
+            print(j.replace('-', ' '))
+
+        godzina = (f'{dict2.get(keys, "Brak seansów w dniu dzisiejszym")}\n')
+        return godzina
+    print('*********************************************************************************************')
+
+
 def run_search():
     result = requests.get("https://www.helios.pl/47,Lodz/Repertuar/")
     src = result.content
@@ -71,24 +86,10 @@ def run_search():
             new_dict2[hour[0]].append(hour[1])
         else:
             new_dict2[hour[0]] = [hour[1]]
-    print(new_dict2)
-
-
-def final(dict1, dict2):
-    print('Oto lista dostępnych seansów w kinie Helios Łodź w dniu dzisiejszym:\n')
-    for keys in dict1.keys():
-        j = dict1.get(keys)
-        if '?' in j:
-            p = j.replace('?events-filter=only-not-dream', '')
-            print(p.replace('-', ' '))
-        else:
-            print(j.replace('-', ' '))
-
-        godzina = (f'{dict2.get(keys, "Brak seansów w dniu dzisiejszym")}\n')
-        print(godzina)
-    print('*********************************************************************************************')
+    godziny = final(new_dict, new_dict2)
+    return godziny
 
 
 if __name__ == '__main__':
     run_search()
-    final(new_dict, new_dict2)
+    # final(new_dict, new_dict2)

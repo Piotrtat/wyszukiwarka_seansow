@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import moje
-from Flask_projekt.Movie_list_func import final, new_dict, new_dict2
+from movie_list_func import run_search
 
 
 app = Flask(__name__)
@@ -13,14 +13,14 @@ def home_page():
 
 @app.route('/selected')
 def all_movies():
-    filmy = final(new_dict, new_dict2)
+    filmy = run_search()
     return render_template("all_movies.html", filmy=filmy)
 
 
 @app.route('/selected_movie')
 def research_movie():
-    movie = "cos"
-    return render_template("one_movie.html", one_movie=movie)
+    movie = 'cos'
+    return render_template("templates/one_movie.html", one_movie=movie)
 
 
 if __name__ == '__main__':
