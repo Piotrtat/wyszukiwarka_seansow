@@ -6,13 +6,12 @@
 </head>
 <body>
 
-    <ol>
+
 <!-- For loop logic of jinja template -->
-{%for i in range(0, len)%}
+    {%for i in range(0, len)%}
+        <li>{{ filmy[i] }}</li>
+    {%endfor%}
 
-    <li>{{ filmy }}</li>
-{%endfor%}
 
-</ol>
 </body>
 </html>
