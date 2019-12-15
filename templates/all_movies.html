@@ -5,8 +5,13 @@
     <title>Wszystkie filmy</title>
 </head>
 <body>
-    <div class="form-group">
-        <header>{{ filmy }}</header>
-    </div>
+
+
+<!-- For loop logic of jinja template -->
+    {%for i in range(0, len)%}
+        <li>{{ filmy[i] }}</li>
+    {%endfor%}
+
+
 </body>
 </html>
