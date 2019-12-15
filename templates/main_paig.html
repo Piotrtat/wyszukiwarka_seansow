@@ -20,11 +20,22 @@
 
     <form action="main_paig.html" class="was-validated">
         <label for="movie">Nazwa filmu:
-        <input type="text" class="form-control" placeholder="Nazwa filmu" id="movie">
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Please fill out this field.</div>
+            <div class="dropdown">
+                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                Wybierz Film
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                </div>
+            </div>
     </label><br />
 
+
+
+    <button onclick="location.href='selected_movie';" id="przycisk" class="btn btn-primary">
+        Wyszukaj</button><br />
 
      <!--div class="form-group">
      <label for="sel1">Wybierz godziny:</label>
