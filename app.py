@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from wyszukiwarka_seansow.Flask_projekt import moje
+import moje
 
 app = Flask(__name__)
 # Bootstrap(app)
