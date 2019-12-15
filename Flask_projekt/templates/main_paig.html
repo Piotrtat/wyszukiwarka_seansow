@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <meta http-equiv="Content-Language" content="pl" />
@@ -9,36 +10,33 @@
     <meta name="keywords" content="wyszukaj seans, seans, repertuar, kina, kino, kino w Lodzi" />
     <title>'Wyszukiwarka Seansów'</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style_home_page.css') }}" />
-    <style>
-        body {
-            background: url('../static/background/tlo.jpg');
-            background-size: cover;
 
-        }
-    </style>
 </head>
 <body>
 <div class="form-group">
     <header>Wyszukiwarka seansów</header>
+    <button onclick="location.href='selected';" id="przycisk" class="btn btn-primary">
+        Wyświetl wszystkie filmy w Heliosie</button><br />
+
     <form action="main_paig.html" class="was-validated">
         <label for="movie">Nazwa filmu:
-        <input type="text" class="form-control" placeholder="Nazwa filmu" id="movie" required>
+        <input type="text" class="form-control" placeholder="Nazwa filmu" id="movie">
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
     </label><br />
-     <div class="form-group">
-    <label for="sel1">Wybierz godziny:</label>
-         <div class=".col-xs-2">
-             <select class="form-control" id="sel1" style="width: 170px">
+
+
+     <!--div class="form-group">
+     <label for="sel1">Wybierz godziny:</label>
+  <select class="form-control" id="sel1" style="width: 170px">
     <option>10:00-11:00</option>
     <option>11:00-12:00</option>
     <option>12:00-13:00</option>
     <option>13:00-14:00</option>
   </select>
-         </div>
-</div>
+     </div-->
     </form>
-    <button type="submit" class="btn btn-primary">Wyszukaj</button>
+    <!--button-- type="submit" class="btn btn-primary">Wyszukaj</button-->
 </div>
 </body>
 </html>
