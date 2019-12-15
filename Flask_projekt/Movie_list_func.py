@@ -34,8 +34,8 @@ movies_list = set(movies3)
 for title in movies_list:
     with_space = title.replace('-', ' ')
     movies4.append(with_space)
-print(f'Oto lista dostępnych filmów:{movies4}')
-print('*********************************************************************************************\n')
+# print(f'Oto lista dostępnych filmów:{movies4}')
+# print('*********************************************************************************************\n')
 
 for link in x:
     t = link.get('href')

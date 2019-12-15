@@ -6,7 +6,6 @@ from Flask_projekt import moje
 app = Flask(__name__)
 Bootstrap(app)
 
-
 @app.route('/')
 def home_page():
     # tasks = moje
@@ -17,7 +16,6 @@ def home_page():
 def research_movie():
     filmy = moje.moje()
     return render_template("all_movies.html", filmy=filmy)
-
 
 if __name__ == '__main__':
     app.run()
