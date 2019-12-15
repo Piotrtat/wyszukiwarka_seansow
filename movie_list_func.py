@@ -4,18 +4,23 @@ import re
 
 
 def final(dict1, dict2):
+    lista = []
     print('Oto lista dostępnych seansów w kinie Helios Łodź w dniu dzisiejszym:\n')
     for keys in dict1.keys():
         j = dict1.get(keys)
         if '?' in j:
             p = j.replace('?events-filter=only-not-dream', '')
-            print(p.replace('-', ' '))
+            i = p.replace('-', ' ')
+            lista.append(i)
         else:
-            print(j.replace('-', ' '))
-
-        godzina = (f'{dict2.get(keys, "Brak seansów w dniu dzisiejszym")}\n')
-        return godzina
-    print('*********************************************************************************************')
+            o = j.replace('-', ' ')
+            lista.append(o)
+        godzina = (f'{dict2.get(keys, "Brak seansów w dniu dzisiejszym")}')
+        lista.append(godzina)
+    #     print(godzina)
+    # print('*********************************************************************************************')
+    # print(lista)
+    return lista
 
 
 def run_search():
@@ -86,6 +91,7 @@ def run_search():
             new_dict2[hour[0]].append(hour[1])
         else:
             new_dict2[hour[0]] = [hour[1]]
+
     godziny = final(new_dict, new_dict2)
     return godziny
 
