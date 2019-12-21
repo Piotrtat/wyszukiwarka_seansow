@@ -2,6 +2,41 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+def current_movie_list():
+    result = requests.get("https://www.helios.pl/47,Lodz/Repertuar/")
+    src = result.content
+    soup = BeautifulSoup(src, 'html.parser')
+    x = soup.find_all(class_="movie-link")
+    movies = []
+    movies2 = []
+    movies3 = []
+    movies4 = []
+
+    global new_dict, new_dict2
+    print('*********************************************************************************************')
+
+    for link in x:
+        t = link.get('href')
+        z = t.split('/')
+        id = z[6]
+        movies2.append(id)
+    # print(movies2)
+
+    for title in movies2:
+        l = title.split('?')
+        correct_title = l[0]
+        if '?' in l:
+            continue
+        else:
+            movies3.append(correct_title)
+
+    movies_list = set(movies3)
+    # print(movies_list)
+
+    for title in movies_list:
+        with_space = title.replace('-', ' ')
+        movies4.append(with_space)
+    return movies4
 
 def final(dict1, dict2):
     lista = []
@@ -99,3 +134,4 @@ def run_search():
 if __name__ == '__main__':
     run_search()
     # final(new_dict, new_dict2)
+    current_movie_list()
