@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-import moje
 from movie_list_func import run_search, final, current_movie_list
 
 app = Flask(__name__)
@@ -21,10 +20,6 @@ def research_movie():
     movie = 'cos'
     return render_template("one_movie.html", one_movie=movie)
 
-
-@app.route('/helios_page')
-def reservation_mode():
-    return render_template("reserve_movie.html")
 
 app.debug = True
 
