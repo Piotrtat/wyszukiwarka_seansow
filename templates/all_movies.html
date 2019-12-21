@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Wszystkie filmy</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_home_page.css') }}" />
 </head>
 <body>
+
 
 
 <!-- For loop logic of jinja template -->
     {%for i in range(0, len)%}
         <li>{{ filmy[i] }}</li>
     {%endfor%}
-
 
 </body>
 </html>
