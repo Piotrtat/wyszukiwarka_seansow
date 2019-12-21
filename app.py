@@ -1,13 +1,13 @@
 from flask import Flask, render_template
 import moje
-from movie_list_func import run_search, final
+from movie_list_func import run_search, final, current_movie_list
 
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home_page():
-    return render_template("main_paig.html")
+    return render_template("main_paig.html", colours = current_movie_list())
 
 
 @app.route('/selected')
@@ -26,6 +26,15 @@ def research_movie():
 def reservation_mode():
     return render_template("reserve_movie.html")
 
+app.debug = True
+
+
+@app.route('/a', methods=['GET'])
+def dropdown():
+    #current_movie_list()
+
+    colours = current_movie_list()
+    return render_template('main_paig.html', colours=colours)
 
 if __name__ == '__main__':
     app.run()
