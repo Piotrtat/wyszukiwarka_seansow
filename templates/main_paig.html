@@ -20,19 +20,20 @@
 
     <form action="main_paig.html" class="was-validated">
         <label for="movie">Nazwa filmu:
-
-                <select name= colours method="GET" action="/">
-    {% for colour in colours %}
-    <option value= "{{colour}}" SELECTED>{{colour}}</option>"
-    {% endfor %}
-</select>
+            <select name= colours method="GET" action="/">
+                {% for colour in colours %}
+                <option value= "{{colour}}" SELECTED>{{colour}}</option>"
+                {% endfor %}
+            </select>
 
     </label><br />
-        
-    <button onclick="location.href='selected_movie';" id="przycisk" class="btn btn-primary">Wyszukaj</button>Comming soon :)<br />
 
-    <a href="https://www.helios.pl/47,Lodz/Repertuar/" id="przycisk" class="btn btn-primary">Przejdź do strony Helios</a>
+    <button onclick="location.href='selected_movie';" id="przycisk" class="btn btn-secondary">Wyszukaj</button>Comming soon :)<br />
 
+    <a href="https://www.helios.pl/47,Lodz/Repertuar/" id="przycisk" class="btn btn-dark">Przejdź do strony Helios</a>
+    <a href="https://www.cinema-city.pl/kina/manufaktura/1080#/buy-tickets-by-cinema?in-cinema=1080&at=2019-12-21&view-mode=list"
+       id="przycisk" class="btn btn-primary">Przejdź do strony Cinema City</a>
+    <a href="https://multikino.pl/repertuar/lodz/teraz-gramy/alfabetyczny" id="przycisk" class="btn btn-danger">Przejdź do strony Multikino</a>
      <!--div class="form-group">
      <label for="sel1">Wybierz godziny:</label>
   <select class="form-control" id="sel1" style="width: 170px">
